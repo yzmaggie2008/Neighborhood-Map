@@ -1,0 +1,37 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	height: 100%;
+	position: relative;;
+}
+
+.row {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.options {
+	height: 100%;
+    line-height: 20px;
+    padding: 10px 10px 30px 5px;
+    text-align: left;
+    width: 340px;
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+.new-title {
+	color: #ff5252;
+	font-size: 20px;
+	font-family: 'Macondo', cursive;
+	margin: 0 0 10px 0;
+	text-align: center;
+}

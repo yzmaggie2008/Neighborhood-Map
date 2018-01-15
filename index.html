@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<mate name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maggie's-Udacity-Neighborhodd-Map</title>
+	<meta name="Neighborhood Map Project" content="Best Chinese Resterants in Cuppertino">
+	<link rel="stylesheet" type="css" href="css/style.css">
+	<link rel="stylesheet" type="css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="css" href="css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Macondo|Open+Sans" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+   	<div class="row">
+   		<div class="options col-xs-4 col-sm-4 col-md-4 col-lg-4">
+   			<h1 class="new-title">Best Chinese Resterants in Cuppertino</h1>
+   			<hr class="separator">
+
+   			<div class="form-group">
+   				<h2>List the Resterants</h2>
+   				<p>You can sort those resterants by different categories</p>
+   				Sort by: <select data-bind="options: categories,
+   				                            optionsText: 'sortItems',
+   				                            value: sortResterants"></select>
+   				<p>
+   					The resterants are:
+   					<b data-bind="text:sortResterants().description"></b>
+   				</p> 
+
+   				<p> All Resterants listed:</p>
+   				<ul class="resterants-list" data-bind="foreach: listLocations">
+   				  <p class="places" data-bind="text: title, click: $parent.clickedLocationOnMap,  visible: isShown"></p>
+   				</ul>                         
+   			</div>
+
+   			<div class="mapHolder">
+   				<div id="map" class="map"></div>
+   			</div>
+
+   			
+   		</div>
+   	</div>
+   </div>
+
+   <script type="javascript" src="js/jquery-3.2.1.min.js"></script>
+   <script type="javascript" src="js/knockout-3.4.2.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu1mWJenJDZ0t0xJTm4B9cNqXXml-eABc&callback=initMap"
+  type="text/javascript"></script>
+</body>
+</html>
