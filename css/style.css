@@ -3,7 +3,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Joti One', cursive;
 }
 
 .container {
@@ -31,7 +31,90 @@ body {
 .new-title {
 	color: #ff5252;
 	font-size: 20px;
-	font-family: 'Macondo', cursive;
+	font-family: 'Joti One', cursive;
 	margin: 0 0 10px 0;
 	text-align: center;
+}
+
+.sparator {
+	height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+.form-group {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.resterants-list {
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+}
+
+.places {
+	margin: 5px 0 5px 5px;
+	padding: 0;
+	font-family: 'Lora', serif;
+	font-weight: bold;
+}
+
+.places:hover {
+	background-color: #ffebee;
+}
+
+.mapHolder {
+	height: 100%;
+	left: 350px;
+	flex-wrap: wrap;
+}
+
+#map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Media for Tablet*/
+@media (min-width: 480px) and (max-width: 765px){
+	.options {
+		padding: 5px 5px 0 5px;
+	}
+
+	.new-title {
+		font-size: 15px;
+		margin: 0 0 5px 0;
+	}
+
+	.form-group {
+		font-size: 10px;
+	}
+
+	.places {
+		font-size: 10px;
+	}
+}
+
+/* Media for Moblie*/
+@media screen and (max-width: 480px) {
+	.options {
+		padding: 2px 2px 0 2px;
+	}
+
+	.new-title {
+		font-size: 13px;
+		margin: 0 0 2px 0;
+	}
+
+	.form-group {
+		font-size: 8px;
+	}
+
+	.places {
+		font-size: 8px;
+	}
+
+
 }
