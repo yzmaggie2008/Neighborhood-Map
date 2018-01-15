@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<mate name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Maggie's-Udacity-Neighborhodd-Map</title>
-	<meta name="Neighborhood Map Project" content="Best Chinese Resterants in Cuppertino">
+	<meta name="Neighborhood Map Project" content="Best Chinese Restaurant in Cuppertino">
 	<link rel="stylesheet" type="css" href="css/style.css">
 	<link rel="stylesheet" type="css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="css" href="css/bootstrap.min.css">
@@ -14,18 +14,18 @@
    <div class="container">
    	<div class="row">
    		<div class="options col-xs-4 col-sm-4 col-md-4 col-lg-4">
-   			<h1 class="new-title">Best Chinese Resterants in Cuppertino</h1>
+   			<h1 class="new-title">Best Chinese Restaurant in Cuppertino</h1>
    			<hr class="separator">
 
    			<div class="form-group">
-   				<h2>List the Resterants</h2>
-   				<p>You can sort those resterants by different categories</p>
+   				<h2>List the Restaurant</h2>
+   				<p>You can sort those restaurant by different categories</p>
    				Sort by: <select data-bind="options: categories,
    				                            optionsText: 'sortItems',
-   				                            value: sortResterants"></select>
+   				                            value: sortRestaurant"></select>
    				<p>
    					The resterants are:
-   					<b data-bind="text:sortResterants().description"></b>
+   					<b data-bind="text:sortRestaurant().description"></b>
    				</p> 
 
    				<p> All Resterants listed:</p>
