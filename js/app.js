@@ -147,7 +147,7 @@ function initMap() {
      		},
      		success: function(data){
      			venue = data.response.venues[0];
-     			if(venue == null){
+     			if(venue === null){
      				windowsPop = "<div class = 'name'> No Venues, please try again!</div>";
      			}else{
      				inforWindow.setContent("<div class='name'>" + "Name: " + "<span class='info'>" + marker.title + "</span></div>" +
@@ -203,7 +203,7 @@ var viewModel = function(){
 
 	this.defaultList = function(){
 		this.listRestaurants().forEach(function(location){
-			self.filteredList().push(location)
+			self.filteredList().push(location);
 		});
 	};
 	this.defaultList();
@@ -223,8 +223,8 @@ var viewModel = function(){
             
       }
 	}.bind(this));
-}
-}
+};
+};
 
 
 var appViewModel = new viewModel();
