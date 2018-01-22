@@ -29,23 +29,29 @@ body {
 }
 
 .new-title {
-	color: #ff5252;
-	font-size: 20px;
-	font-family: 'Joti One', cursive;
+	color: #29b6f6;
+	/*font-size: 20px;*/
+	font-family: 'Slabo 27px', serif;
 	margin: 0 0 10px 0;
 	text-align: center;
 }
 
-.sparator {
-	height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+.separator { 
+	height:3px;
+	border:none;
+	border-top:3px 
+	double #ff8a65;
+	margin-bottom: 0;
 }
 
 .form-group {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 16px;
+}
+
+.new-text {
+	font-family: 'Dosis', sans-serif;
 }
 
 .restaurant-list {
@@ -65,16 +71,16 @@ body {
 	background-color: #ffebee;
 }
 
-.mapHolder {
-	height: 100%;
-	left: 350px;
-	flex-wrap: wrap;
+.mapContainer {
+  height: 100%;
+  left: 370px;
+  flex-wrap: wrap;
 }
 
 #map {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+   height: 100%;
+   margin: 0;
+   padding: 0;
 }
 
 /* Media for Tablet*/

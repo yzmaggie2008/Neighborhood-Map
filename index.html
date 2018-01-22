@@ -4,48 +4,40 @@
 	<meta charset="utf-8">
 	<mate name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Maggie's-Udacity-Neighborhodd-Map</title>
-	<meta name="Neighborhood Map Project" content="Best Chinese Restaurant in Cuppertino">
-	<link rel="stylesheet" type="css" href="css/style.css">
-	<link rel="stylesheet" type="css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="css" href="css/bootstrap.min.css">
-   <link href="https://fonts.googleapis.com/css?family=Macondo|Joti+One|Lora" rel="stylesheet">
+	<meta name="Neighborhood Map Project" content="Best Chinese Restaurant in Cupertino">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Macondo|Slabo+27px|Lora|Dosis" rel="stylesheet">
 </head>
 <body>
    <div class="container">
    	<div class="row">
    		<div class="options col-xs-4 col-sm-4 col-md-4 col-lg-4">
-   			<h1 class="new-title">Best Chinese Restaurant in Cuppertino</h1>
+   			<h1 class="new-title">Best Chinese Restaurant in Cupertino</h1>
    			<hr class="separator">
 
    			<div class="form-group">
-   				<h2>List the Restaurant</h2>
-   				<p>You can sort those restaurant by different categories</p>
-   				Sort by: <select data-bind="options: categories,
-   				                            optionsText: 'sortItems',
-   				                            value: sortRestaurant"></select>
-   				<p>
-   					The resterants are:
-   					<b data-bind="text:sortRestaurant().description"></b>
-   				</p> 
-
-   				<p> All Resterants listed:</p>
-   				<ul class="resterants-list" data-bind="foreach: listLocations">
-   				  <p class="places" data-bind="text: title, click: $parent.clickedLocationOnMap,  visible: isShown"></p>
-   				</ul>                         
+   				<h2 class="new-text">List the Restaurant</h2>
+   				<div>
+                  <p> The restaurant sort by 
+                  <select id="filter" data-bind="options: filterOptions, value: selectedOption, click: update"></select></p>
+                  <ul id="place-list" data-bind="foreach: filteredList" >
+                      <li data-bind="text: title, click: $parent.setAttraction"></li>
+                  </ul>
+               </div>                        
    			</div>
-
-   			<div class="mapHolder">
-   				<div id="map" class="map"></div>
-   			</div>
-
-   			
-   		</div>
+         </div>
+         <div class="mapContainer ">
+            <div id="map" class="map"></div>
+         </div>
+	
    	</div>
    </div>
-
-   <script type="javascript" src="js/jquery-3.2.1.min.js"></script>
-   <script type="javascript" src="js/knockout-3.4.2.js"></script>
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu1mWJenJDZ0t0xJTm4B9cNqXXml-eABc&callback=initMap"
-  type="text/javascript"></script>
+   
+   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWOLskfk4YKzM1LUDzzhXiCwfzydzyHIc&callback=initMap" async defer></script>
+   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
