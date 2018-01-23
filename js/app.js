@@ -374,23 +374,33 @@ function initMap() {
      	});
      }  
 
+function googleMapError() {
+    alert("Google Map could not be loaded at this moment. Please try again later");
+}
+
       //Constructor for location
 var objLocation = function(data){
       	this.title = ko.observable(data.name);
       	this.location = ko.observable(data.coordinates);
       	this.category = ko.observable(data.category);
       };
- 
+
+  function hideMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setVisible(false);
+    }
+  };
+
 //viewModel function
 var viewModel = function(){
 	var self = this;
-    
-    this.isShown = ko.observable(true);
+
+  this.isShown = ko.observable(true);
 	this.toggleMenu = function(){
 		this.isShown(!this.isShown());
 	}.bind(this);
 
-	this.listRestaurants = ko.observableArray([]);
+	self.listRestaurants = ko.observableArray([]);
 
     locations.forEach(function(restaurant){
     	this.listRestaurants.push(new objLocation(restaurant));
@@ -409,20 +419,24 @@ var viewModel = function(){
 		});
 	};
 	this.defaultList();
+
 	this.update = function(){
-       this.listRestaurants().forEach(function(location){
-       	this.filteredList.pop(location);
+       this.listRestaurants().forEach(function(restaurant){
+       	this.filteredList.pop(restaurant);
        }.bind(this));
+       hideMarkers();
+
 	   this.listRestaurants().forEach(function(location){
 	   	if(this.selectedOption() === 'All') {
-	   		this.filteredList.push(location);
-           
+        this.filteredList.push(location);
+        location.marker.setVisible(true);
+
        } else if (this.selectedOption() === 'Party' && location.category() === 'Party') {
             this.filteredList.push(location);
-            
+            location.marker.setVisible(true);
       } else if (this.selectedOption() === 'Alone' && location.category() === 'Alone'){
             this.filteredList.push(location);
-            
+            location.marker.setVisible(true);
       }
 	}.bind(this));
 };
