@@ -389,7 +389,7 @@ var objLocation = function(data){
     for (var i = 0; i < markers.length; i++) {
       markers[i].setVisible(false);
     }
-  };
+  }
 
 //viewModel function
 var viewModel = function(){
