@@ -107,31 +107,228 @@ function initMap() {
 
         largeInfowindow = new google.maps.InfoWindow();
 
-        for(var i = 0; i < locations.length; i++){
-        	var position = locations[i].coordinates;
-        	var title = locations[i].name;
-        	console.log("title:"  + title);
-        	marker = new google.maps.Marker({
-        		map: map,
-        		position: position,
-        		title: title,
-        		animation: google.maps.Animation.Drop,
-        	});
+      
+        var position_0 = locations[0].coordinates;
+        var title_0 = locations[0].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_0,
+        	title: title_0,
+        	animation: google.maps.Animation.Drop,
+        });
         //put the markers into an array
         markers.push(marker);
         
         //connect the list and markers
-        appViewModel.listRestaurants()[i].marker = marker;
+        appViewModel.listRestaurants()[0].marker = marker;
 
-        //event listener for the marker when it is clicked
+      
+               //event listener for the marker when it is clicked
         marker.addListener('click', function(){
-        	console.log(this);
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+        
+        var position_1 = locations[1].coordinates;
+        var title_1 = locations[1].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_1,
+        	title: title_1,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[1].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
         	populateInfoWindow(this, largeInfowindow);
         });
 
-        }
+        var position_2 = locations[2].coordinates;
+        var title_2 = locations[2].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_2,
+        	title: title_2,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[2].marker = marker;
 
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+
+        var position_3 = locations[3].coordinates;
+        var title_3 = locations[3].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_3,
+        	title: title_3,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[3].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+
+        var position_4 = locations[4].coordinates;
+        var title_4 = locations[4].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_4,
+        	title: title_4,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[4].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+
+        var position_5 = locations[5].coordinates;
+        var title_5 = locations[5].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_5,
+        	title: title_5,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[5].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+
+        var position_6 = locations[6].coordinates;
+        var title_6 = locations[6].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_6,
+        	title: title_6,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[6].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });  
+
+        var position_7 = locations[7].coordinates;
+        var title_7 = locations[7].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_7,
+        	title: title_7,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[7].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });  
+
+        var position_8 = locations[8].coordinates;
+        var title_8 = locations[8].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_8,
+        	title: title_8,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[8].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });
+
+        var position_9 = locations[9].coordinates;
+        var title_9 = locations[9].name;
+        
+        marker = new google.maps.Marker({
+        	map: map,
+        	position: position_9,
+        	title: title_9,
+        	animation: google.maps.Animation.Drop,
+        });
+        //put the markers into an array
+        markers.push(marker);
+        
+        //connect the list and markers
+        appViewModel.listRestaurants()[9].marker = marker;
+
+      
+               //event listener for the marker when it is clicked
+        marker.addListener('click', function(){
+      
+        	populateInfoWindow(this, largeInfowindow);
+        });                           
       }
+ 
 
      //function for populating the inforWindow when the marker is clicked
      function populateInfoWindow(marker, largeInfowindow){
