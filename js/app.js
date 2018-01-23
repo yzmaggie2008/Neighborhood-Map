@@ -334,7 +334,6 @@ function initMap() {
      function populateInfoWindow(marker, largeInfowindow){
      	var venue;
      	var windowsPop;
-     	console.log("marker: " + marker)
      	$.ajax({
      		url: foursquareLogin.url,
      		dataType: foursquareLogin.dataType,
