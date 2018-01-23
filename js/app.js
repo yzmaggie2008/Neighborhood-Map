@@ -94,7 +94,7 @@ var foursquareLogin = {
 
 var map;
 var marker;
-var infoWindow;
+var largeInfoWindow;
 var markers = [];
 
 //initiate the map when loading
@@ -105,7 +105,7 @@ function initMap() {
           center: cupertino
         });
 
-        var largeInfowindow = new google.maps.InfoWindow();
+        largeInfowindow = new google.maps.InfoWindow();
 
         for(var i = 0; i < locations.length; i++){
         	var position = locations[i].coordinates;
@@ -132,7 +132,7 @@ function initMap() {
       }
 
      //function for populating the inforWindow when the marker is clicked
-     function populateInfoWindow(marker, inforWindow){
+     function populateInfoWindow(marker, largeInforWindow){
      	var venue;
      	var windowsPop;
      	$.ajax({
@@ -155,15 +155,16 @@ function initMap() {
                                 "<div class='foursquareInfo'>" + "Foursquare info: " + "<a href='" + foursquareLogin.venueLink + venue.id + "'>" + "Link" + "</a></div>");
      			}
 
+                largeInfowindow.setContent(windowsPop);
      			marker.setAnimation(google.maps.Animation.BOUNCE);
      			setTimeout(function(){
      				marker.setAnimation(null);
      			}, 1800);
 
-                infoWindow.open(map, marker);
+                largeInfoWindow.open(map, marker);
 
-                infoWindow.addListener('closeclick', function(){
-                	infoWindow.setMarker = null;
+                largeInfoWindow.addListener('closeclick', function(){
+                	largeInfoWindow.setMarker = null;
                 });
      		},
      		error: function(){
