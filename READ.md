@@ -8,6 +8,7 @@ How to use
 		When you click the markers on the map, there will be a window showed and some information about this markers shows on the window.
 		The list on the leftside of the page can be sorted by different category, once you click the sorted button, it will list as you wish.
 		The online link: https://yzmaggie2008.github.io/index.html
+		Or you can down this repo to your own computer then click the index.html to run it.
 Acknoledgments
 =============
 The 3rd party APIs were listed below:\br
